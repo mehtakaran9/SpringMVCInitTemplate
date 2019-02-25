@@ -5,9 +5,7 @@
 	<title>Get Age</title>
 </head>
 <body>
-<h1>
-Get Age
-</h1>
+<h1>Get Age</h1>
 
 <P>  The age is ${age}. </P>
 </body>

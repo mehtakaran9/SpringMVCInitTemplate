@@ -45,10 +45,10 @@ public class HomeController {
 		return "forward";
 	}
 
-	@RequestMapping(value = "/forward/{age}", method = RequestMethod.GET)
-	public int getAge(@PathVariable("int") int age, Model model){
+	@RequestMapping(value = "/get/{age}", method = RequestMethod.GET)
+	public String getAge(@PathVariable("age") int age, Model model){
 		model.addAttribute("age",age);
-		return age;
+		return "getAge";
 	}
 
 }
