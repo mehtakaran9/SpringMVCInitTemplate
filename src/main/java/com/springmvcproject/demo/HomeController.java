@@ -17,38 +17,38 @@ import java.util.Locale;
  */
 @Controller
 public class HomeController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+    private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+    /**
+     * Simply selects the home view to render by returning its name.
+     */
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String home(Locale locale, Model model) {
+        logger.info("Welcome home! The client locale is {}.", locale);
 
-		String formattedDate = dateFormat.format(date);
+        Date date = new Date();
+        DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 
-		model.addAttribute("serverTime", formattedDate );
+        String formattedDate = dateFormat.format(date);
 
-		return "home";
-	}
+        model.addAttribute("serverTime", formattedDate );
 
-	@RequestMapping(value = "/forward/{var}", method = RequestMethod.GET)
-	public String forward(@PathVariable("var") String var, Model model){
+        return "home";
+    }
 
-		model.addAttribute("var",var);
+    @RequestMapping(value = "/forward/{var}", method = RequestMethod.GET)
+    public String forward(@PathVariable("var") String var, Model model){
 
-		return "forward";
-	}
+        model.addAttribute("var",var);
 
-	@RequestMapping(value = "/get/{age}", method = RequestMethod.GET)
-	public String getAge(@PathVariable("age") int age, Model model){
-		model.addAttribute("age",age);
-		return "getAge";
-	}
+        return "forward";
+    }
+
+    @RequestMapping(value = "/get/{age}", method = RequestMethod.GET)
+    public String getAge(@PathVariable("age") int age, Model model){
+        model.addAttribute("age",age);
+        return "getAge";
+    }
 
 }

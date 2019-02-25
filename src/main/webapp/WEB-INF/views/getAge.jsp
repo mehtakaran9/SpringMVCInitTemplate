@@ -2,10 +2,10 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Get Age</title>
+	<title>Age Caller</title>
 </head>
 <body>
-<h1>Get Age</h1>
+<h1>Get sAge</h1>
 
 <P>  The age is ${age}. </P>
 </body>
