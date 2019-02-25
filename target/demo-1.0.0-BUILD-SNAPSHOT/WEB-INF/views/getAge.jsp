@@ -2,14 +2,13 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Home</title>
+	<title>Get Age</title>
 </head>
 <body>
 <h1>
-	Hello!
+Get Age
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
-<P>This file is auto deployed</P>
+<P>  The age is ${age}. </P>
 </body>
 </html>
